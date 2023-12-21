@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>TuneTales</title>
+</head>
+<body>
+    <header>
+        <h1 class="name">TuneTales</h1>
+    </header>
+    <div class="block">
+        <div class="b20block">
+            <p class="mbut"><a href="index.html" class="but">Главная</a></p>
+        </div>
+        <div class="b20block">
+            <p class="mbut"><a href="tracs.html" class="but">Треки</a></p>
+        </div>
+        <div class="b20block">
+            <p class="mbut"><a href="support.html" class="but">Поддержка</a></p>
+        </div>
+        <div class="b20block">
+            <p class="mbut"><a href="aboutus.html" class="but">О нас</a></p>
+        </div>
+    </div>
+    <main>
+        <div>
+            <div class="search" style="text-align: center; margin-top: 20px;">
+                <span style="font-size: 20px;">Поиск</span>
+                <input type="text" id="searchText" style="height: 30px;">
+                <img src="lupa.png" alt="Поиск" onClick="search();" style="height: 30px; cursor: pointer; background-color: silver; margin-top: -5px; border-radius: 5%;">
+            </div>
+            <p class="m" style="font-size: 30px; font-weight: bolder;">Треки</p>
+            <div class="tracks" style="margin-bottom: 20px;">
+                <div class="gallery">
+                    <div class="audiodiv" onclick="viewItem(0)">
+                      <img class="audioimg" src="ico/ПЫЯЛА.png" alt="пыяла">
+                      <p class="audioname">AIGEL - Пыяла</p>
+                      <audio controls src="Music/aigel-pyyala.mp3"></audio>
+                    </div>
+                    <div class="audiodiv" onclick="viewItem(1)">
+                      <img class="audioimg" src="ico/Прощание.png" alt="Прощание">
+                      <p class="audioname">Три Дня Дождя feat. Mona - Прощание</p>
+                      <audio controls src="Music/tri-dnja-dozhdja-feat.-mona-proshhanie.mp3"></audio>
+                    </div>
+                    <div class="audiodiv" onclick="viewItem(2)">
+                      <img class="audioimg" src="ico/Заря.png" alt="На заре">
+                      <p class="audioname">Basta - На заре</p>
+                      <audio controls src="Music/basta-na-zare.mp3"></audio>
+                    </div>
+                    <div class="audiodiv" onclick="viewItem(3)">
+                    <img class="audioimg" src="ico/toxi$_hurthz.png" alt="HURTZ">
+                    <p class="audioname">Toxi$ - HURTZ</p>
+                    <audio controls src="Music/toxi-hurtz.mp3"></audio>
+                    </div>
+                    <div class="audiodiv" onclick="viewItem(4)">
+                    <img class="audioimg" src="ico/moya-mishel-zima-v-serdtse.png" alt="Зима в сердце">
+                    <p class="audioname">Moya Mishel - Зима в сердце</p>
+                    <audio controls src="Music/moja-mishel-zima-v-serdce-gosti-iz-budushhego-cover.mp3"></audio>
+                    </div>
+                    <div class="audiodiv" onclick="viewItem(5)">
+                    <img class="audioimg" src="ico/Lost Angeles.png" alt="Lost Angeles">
+                    <p class="audioname">FRIENDLY THUG 52 NGG - Lost Angeles</p>
+                    <audio controls src="Music/FRIENDLY_THUG_52_NGG_-_Lost_Angeles_76929092.mp3"></audio>
+                    </div>
+                    <div class="audiodiv" onclick="viewItem(6)">
+                    <img class="audioimg" src="ico/1kla$.png" alt="Сукины дети">
+                    <p class="audioname">1.Kla$ - Сукины дети</p>
+                    <audio controls src="Music/1Kla_-_Sukiny_deti_75426940.mp3"></audio>
+                    </div>
+                    <div class="audiodiv" onclick="viewItem(7)">
+                    <img class="audioimg" src="ico/комбинация.png" alt="Не забывай">
+                    <p class="audioname">Kombinaciya - Не забывай</p>
+                    <audio controls src="Music/Комбинация - Не забывай (256  kbps).mp3"></audio>
+                    </div>
+                    <div class="audiodiv" onclick="viewItem(8)">
+                    <img class="audioimg" src="ico/царица.png" alt="Царица">
+                    <p class="audioname">ANNA ASTI - Царица</p>
+                    <audio controls src="Music/anna-asti-carica.mp3"></audio>
+                    </div>
+                    <div class="audiodiv" onclick="viewItem(9)">
+                    <img class="audioimg" src="ico/lubov.png" alt="Это любовь">
+                    <p class="audioname">Skryptonite - Это любовь</p>
+                    <audio controls src="Music/skriptonit-jeto-ljubov.mp3"></audio>
+                    </div>
+                  </div>
+                
+                  <script>
+                    function viewItem(index) {
+                      const imgSrcs = ["ico/ПЫЯЛА.png", "ico/Прощание.png", "ico/Заря.png", "ico/toxi$_hurthz.png", "ico/moya-mishel-zima-v-serdtse.png", "ico/Lost Angeles.png", "ico/1kla$.png", "ico/комбинация.png", "ico/царица.png", "ico/lubov.png"];
+                      const audioSrcs = ["Music/aigel-pyyala.mp3", "Music/tri-dnja-dozhdja-feat.-mona-proshhanie.mp3", "Music/basta-na-zare.mp3", "Music/toxi-hurtz.mp3", "Music/moja-mishel-zima-v-serdce-gosti-iz-budushhego-cover.mp3", "Music/FRIENDLY_THUG_52_NGG_-_Lost_Angeles_76929092.mp3", "Music/1Kla_-_Sukiny_deti_75426940.mp3", "Music/Комбинация - Не забывай (256  kbps).mp3", "Music/anna-asti-carica.mp3", "Music/skriptonit-jeto-ljubov.mp3"];
+                      const titles = ["AIGEL - Пыяла", "Три Дня Дождя feat. Mona - Прощание", "Basta - На заре", "Toxi$ - HURTZ", "Moya Mishel - Зима в сердце", "FRIENDLY THUG 52 NGG - Lost Angeles", "1.Kla$ - Сукины дети", "Kombinaciya - Не забывай", "ANNA ASTI - Царица", "Skryptonite - Это любовь"];
+                
+                      const imgSrc = imgSrcs[index];
+                      const audioSrc = audioSrcs[index];    
+                      const title = titles[index];
+                      
+                      window.location.href = `autext.html?img=${encodeURIComponent(imgSrc)}&audio=${encodeURIComponent(audioSrc)}&title=${encodeURIComponent(title)}`;
+                    }
+                  </script>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="b50">
+            <p class="f" style="font-size: 20px; font-weight: bolder; text-align: center;">
+                TuneTales - это коллекция текстов песен и музыкальных знаний
+            </p>
+        </div>
+        <div class="b25">
+            <p class="f25">Только провренные исполнители</p>
+            <p class="f25">Быстрое добавление новых треков</p>
+            <p class="f25">Возможность бесплатно слушать</p>
+        </div>
+        <div class="b25">
+            <p class="f25">Актуальные новости</p>
+            <p class="f25">Самые свежие треки</p>
+            <p class="f25">Ответственные редакторы</p>
+        </div>
+    </footer>
+</body>
+<script src="constants.js"></script>
+<script src="imghref.js"></script>
+<script src="script.js"></script>
+</html>

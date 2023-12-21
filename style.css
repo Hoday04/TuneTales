@@ -1,0 +1,203 @@
+header{
+    position: static;
+    background-color: black;
+    height: 50px;    
+	left: 0;
+	top: 0;
+	width: 100%;
+}
+footer{
+    display: flex;
+    position: static;
+    background-color: black;
+    margin-top: auto;
+    height: 200px;	
+	width: 100%;
+}
+.main{
+    position: static;
+    width: 100%;
+}
+.block {
+    position: static;
+    background-color: silver;
+    height: 50px;    
+	width: 100%;
+}
+.name{
+    text-align: center;
+    color: maroon;
+    text-shadow: 1px 1px 2px silver;
+    font-weight: bolder;
+}
+.b50{
+    float: left;
+    width: 50%;
+}
+.b25{
+    float: left;
+    position: relative;
+    width: 25%;
+}
+.b20block{
+    float: left;
+    position: relative;
+    width: 25%;
+    height: 100%;
+    text-align: center;
+    font-size: 15px;
+}
+.f{
+    margin-top: 7%;
+    color: white;
+    margin-left: 2%;
+    font-size: 20px;
+}
+.f25{
+    margin-top: 7%;
+    color: white;
+    margin-left: 2%;
+    font-size: 15px;
+}
+.m{
+    color: black;
+    text-shadow: 1px 1px 2px black;
+    margin-left: 2%;
+}
+.chart{
+    width: 100%;
+    border: 3px solid black;
+}
+.tracks{
+    width: 100%;
+    border: 3px solid black;
+}
+.audiodiv{
+    width: 100%;
+    height: 150px;
+    border: 1px solid black;
+    align-items: center;
+}
+audio{
+    width: 66%;
+    margin-top: 50px;
+    height: 50px;
+}
+.auaudio{
+    width: 50%;
+    height: 50px;
+    margin-top: 11%;    
+}
+.audioimg{
+    float: left;
+    margin-top: 15px;
+    margin-left: 15px;
+    width: 120px;
+    height: 120px;
+    cursor: pointer;
+}
+.auimg{
+    float: left;
+    margin-top: 15px;
+    margin-left: 15px;
+    width: 300px;
+    height: 300px;
+    cursor: pointer;
+}
+.audioname{
+    float: left;
+    width: 235px;
+    max-width: 500px;
+    text-align: center;
+    margin-top: 60px;
+    cursor: pointer;
+}
+.auname{
+    float: left;
+    width: 235px;
+    max-width: 500px;
+    text-align: center;
+    margin-top: 60px;
+    cursor: pointer;
+    margin-top: 11%;
+}
+.but{
+    text-decoration: none;
+    color: black;
+    text-shadow: 1px 1px 2px black;
+    height: 100%;
+    width: 100%;
+    display: block;
+    margin-top: 4%;
+}
+.mbut{
+    height: 100%;
+}
+.mbut:hover{
+    border: 3px solid black;
+    height: 100%;
+}
+.b25news{
+    position: static;
+    width: 25%;
+    border: 3px solid black;
+    align-items: center;
+    height: 400px;
+    text-align: center;
+}
+.imgnews{
+    margin-top: 20px;
+    width: 250px;
+    height: 250px;
+}
+.redactor{
+    margin-left: 20px;
+    float: left;
+    height: 80px; 
+    width: 80px;
+}
+.redactors{    
+    width: 100%;
+    border: 3px solid black;
+    float: left;
+    height: 105px; 
+    align-items: center;
+    display: flex;
+}
+.r{
+    height: 100%;
+    margin-left: 20px;
+    margin-top: 85px;
+    font-size: 20px;
+    color: black;
+    text-shadow: 1px 1px 2px black;
+}
+.redblock{
+    float: left;
+    width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+}
+.newsblock{
+    align-items: center;
+    display: flex;
+    width: 100%;
+}
+.newstext{
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    text-shadow: 1px 1px 2px black;
+    font-size: 15px;
+}
+.suptext{
+    color: black;
+    text-shadow: 1px 1px 2px black;
+    height: 100%;
+    width: 70%;
+    margin-left: 15%;
+    font-size: 20px;
+    margin-top: 6.75%;
+    margin-bottom: 6.75%;
+    text-align: center;
+}

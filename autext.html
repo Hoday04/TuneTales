@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>TuneTales</title>
+</head>
+<body>
+    <header>
+        <h1 class="name">TuneTales</h1>
+    </header>
+    <div class="block">
+        <div class="b20block">
+            <p class="mbut"><a href="index.html" class="but">Главная</a></p>
+        </div>
+        <div class="b20block">
+            <p class="mbut"><a href="tracs.html" class="but">Треки</a></p>
+        </div>
+        <div class="b20block">
+            <p class="mbut"><a href="support.html" class="but">Поддержка</a></p>
+        </div>
+        <div class="b20block">
+            <p class="mbut"><a href="aboutus.html" class="but">О нас</a></p>
+        </div>
+    </div>
+    <main>
+        <div id="audioContainer" style="font-size: 25px;"></div>
+        <div id="lyrics" style="margin-top: 7%; padding: 50px; font-size: 20px;"></div>
+        <script>
+          const urlParams = new URLSearchParams(window.location.search);
+          const audioSrc = urlParams.get('audio');
+          const audioTitle = urlParams.get('title');
+          const imgSrc = urlParams.get('img');
+          const index = urlParams.get('index');
+      
+          const audioElement = document.createElement('audio');
+          audioElement.controls = true;
+          audioElement.src = audioSrc;
+          audioElement.className = 'auaudio';
+      
+          const audioTitleElement = document.createElement('p');
+          audioTitleElement.innerText = audioTitle;
+          audioTitleElement.className = "auname";
+    
+          const imgElement = document.createElement('img');
+          imgElement.src = imgSrc;
+          imgElement.className = "auimg";
+      
+          const audioContainer = document.getElementById('audioContainer');
+          audioContainer.appendChild(imgElement);
+          audioContainer.appendChild(audioTitleElement);
+          audioContainer.appendChild(audioElement);
+
+          function loadLyricsFromFile(trackName) {
+      fetch(trackName)
+        .then(response => response.text())
+        .then(lyricsText => {
+          addLyricsToPage(lyricsText);
+        })
+        .catch(error => {
+          console.error('Ошибка загрузки файла:', error);
+        });
+    }
+
+    function addLyricsToPage(lyricsText) {
+      var lyricsDiv = document.getElementById('lyrics');
+      lyricsDiv.innerText = lyricsText;
+    }
+    var trackName = 'texts/'+audioTitle+'.txt';
+    loadLyricsFromFile(trackName);
+        </script>
+    </main>
+    <footer>
+        <div class="b50">
+            <p class="f" style="font-size: 20px; font-weight: bolder; text-align: center;">TuneTales - это коллекция текстов песен и музыкальных знаний</p>
+        </div>
+        <div class="b25">
+            <p class="f25">Только провренные исполнители</p>
+            <p class="f25">Быстрое добавление новых треков</p>
+            <p class="f25">Возможность бесплатно слушать</p>
+        </div>
+        <div class="b25">
+            <p class="f25">Актуальные новости</p>
+            <p class="f25">Самые свежие треки</p>
+            <p class="f25">Ответственные редакторы</p>
+        </div>
+    </footer>
+</body>
+<script src="script.js"></script>
+</html>
